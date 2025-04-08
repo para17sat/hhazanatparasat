@@ -13,7 +13,19 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <style>
+   
+          .tablet-view {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.mobile-view {
+  width: 375px;
+  margin: 0 auto;
+}
+          
         @charset "UTF-8";
 /*!
 * Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
@@ -11110,6 +11122,14 @@ footer.footer {
                 </div>
             </div>
         </section>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Icons -->
+<div class="device-switcher">
+  <i class="fas fa-desktop" id="desktopIcon"></i>
+  <i class="fas fa-tablet-alt" id="tabletIcon"></i>
+  <i class="fas fa-mobile-alt" id="mobileIcon"></i>
+</div>
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
@@ -11144,7 +11164,21 @@ footer.footer {
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-   
+   <script>
+  const body = document.body;
+
+  document.getElementById('desktopIcon').addEventListener('click', () => {
+    body.className = 'desktop-view';
+  });
+
+  document.getElementById('tabletIcon').addEventListener('click', () => {
+    body.className = 'tablet-view';
+  });
+
+  document.getElementById('mobileIcon').addEventListener('click', () => {
+    body.className = 'mobile-view';
+  });
+</script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
